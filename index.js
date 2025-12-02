@@ -15,8 +15,8 @@ db.on('error', () => { console.error('Error de conexión')});
 db.once('open', () => { console.log('Conexión con la DB Correcta, ok')});
 
 const app = express();
-app.use(cors () );
 app.use( express.json() );
+app.use(cors () );
 
 app.use('/', express.static('public'));
 
