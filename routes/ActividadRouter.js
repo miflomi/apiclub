@@ -10,8 +10,8 @@ const router = express.Router();
 
 router.get('/', listarActividades);
 router.get('/:id', getActById);
-router.delete('/:id',validarJWT, deleteActById);
-router.put('/:id',validarJWT, updeteActById);
+router.delete('/:id', validarJWT, deleteActById);
+router.put('/:id', validarJWT, updeteActById);
 router.post('/', validarJWT, crearActividad);
 
 export default router;
