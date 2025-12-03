@@ -6,6 +6,7 @@ import {
         deleteActById,
         updeteActById 
     } from '../controllers/ActividadController.js';
+import { validarJWT } from '../middlewares/auth.js';
 const router = express.Router();
 
 router.get('/', listarActividades);
