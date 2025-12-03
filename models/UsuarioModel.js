@@ -11,7 +11,15 @@ const esquema = new Schema({
         required: true,
         unique: true
     },
-    clave: String,
+    clave: {
+        type: String,
+        required: true
+    },
+    rol: {
+        type: String,
+        enum: ['admin', 'deportista', 'profesor'],
+        default: 'deportista'
+    },
     tel: Number,
     created: {
         type: Date,
