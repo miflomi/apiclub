@@ -8,10 +8,10 @@ import {
     } from '../controllers/ActividadController.js';
 const router = express.Router();
 
-router.get('/', validarJWT, listarActividades);
+router.get('/', listarActividades);
 router.get('/:id', getActById);
-router.delete('/:id', deleteActById);
-router.put('/:id', updeteActById);
+router.delete('/:id',validarJWT, deleteActById);
+router.put('/:id',validarJWT, updeteActById);
 router.post('/', validarJWT, crearActividad);
 
 export default router;
