@@ -16,7 +16,7 @@ const validarJWT = (request, response, next ) => {
             response.status(403).json({ msg: 'Token invalidooo'});
         }
         console.log({decoded});
-        request.body.userId = decoded.id;
+        request.userId = decoded.id;
     })
 
     next();
